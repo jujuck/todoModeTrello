@@ -66,6 +66,46 @@
         </div>
       </div>
     </section>
+    <section>
+      <div>
+        <h2>Ajouter une tache</h2>
+      </div>
+      <div class="container">
+        <form class="card form">
+          <div>
+            <label for="title">Titre</label>
+            <input type="text" id="title">
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <textarea id="description" rows="10"></textarea>
+          </div>
+          <div>
+            <label for="status">Status</label>
+            <select name="status" id="status">
+              <option value="todo">A faire</option>
+              <option value="progress">en cours</option>
+              <option value="done">Terminée</option>
+            </select>
+          </div>
+          <div>
+            <label for="category">Categorie</label>
+            <select name="category" id="category">
+              <option value="home">Maison</option>
+              <option value="sport">Sport</option>
+              <option value="code">Code</option>
+            </select>
+          </div>
+          <div>
+            <label for="date">Date butoire</label>
+            <input type="date" id="date">
+          </div>
+          <div>
+            <button type="button">Ajouter</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
   <script src="./script.js"></script>
 </body>

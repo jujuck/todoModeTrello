@@ -20,7 +20,7 @@
   padding: .2rem
 }
 
-.nav button {
+button {
   list-style-type: none;
   width: 5rem;
   border: 1px solid black;
@@ -30,7 +30,7 @@
   color: white;
 }
 
-.nav button:hover {
+button:hover {
   background-color: white;
   color: black;
   cursor: pointer;
@@ -69,4 +69,17 @@ section h2 {
 
 .card span {
   font-size: bold;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  margin: .3rem .1rem;
+}
+
+.form div input,
+.form div textarea,
+.form div select {
+  border-radius: 2rem;
+  padding: .1rem .5rem;
 }
