@@ -74,15 +74,15 @@
         <form class="card form">
           <div>
             <label for="title">Titre</label>
-            <input type="text" id="title">
+            <input type="text" id="title" required>
           </div>
           <div>
             <label for="description">Description</label>
-            <textarea id="description" rows="10"></textarea>
+            <textarea id="description" rows="10" required></textarea>
           </div>
           <div>
             <label for="status">Status</label>
-            <select name="status" id="status">
+            <select name="status" id="status" required>
               <option value="todo">A faire</option>
               <option value="progress">en cours</option>
               <option value="done">Terminée</option>
@@ -90,7 +90,7 @@
           </div>
           <div>
             <label for="category">Categorie</label>
-            <select name="category" id="category">
+            <select name="category" id="category" required>
               <option value="home">Maison</option>
               <option value="sport">Sport</option>
               <option value="code">Code</option>
@@ -98,10 +98,10 @@
           </div>
           <div>
             <label for="date">Date butoire</label>
-            <input type="date" id="date">
+            <input type="date" id="date" required>
           </div>
           <div>
-            <button type="button">Ajouter</button>
+            <button type="submit">Ajouter</button>
           </div>
         </form>
       </div>
