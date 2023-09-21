@@ -31,4 +31,15 @@ const tasks = [
     status: "todo",
     date: "12/10/2023"
   }
-]
+];
+
+console.log(tasks)
+
+const addTask = (e) => {
+  console.log("AddTask")
+  const title = document.getElementById('title').value;
+  const description = document.getElementById('description').value;
+  const date = document.getElementById('date').value;
+  console.log(title, description, date)
+
+}
