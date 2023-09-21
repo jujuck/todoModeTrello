@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  width: 7rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding: .2rem
+}
+
+.nav button {
+  list-style-type: none;
+  width: 5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 0.1rem 0.5rem;
+  background-color: black;
+  color: white;
+}
+
+.nav button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+main {
+  margin: 3rem 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+section {
+  margin: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+
+section h2 {
+  text-align: center;
+}
+
+.container {
+  margin: 0.5rem;
+}
+
+.card {
+  background-color: lightgrey;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.card span {
+  font-size: bold;
+}
