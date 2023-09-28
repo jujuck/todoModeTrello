@@ -38,4 +38,12 @@ const taskForm = document.getElementById('taskForm');
 taskForm.addEventListener('submit', (event) => {
   event.preventDefault();
   console.log("Submit Forms");
+
+  const title = document.getElementById('title').value;
+  const description = document.getElementById('description').value;
+  const category = document.getElementById('category').value;
+  const status = document.getElementById('status').value;
+  const date = document.getElementById('date').value;
+
+  console.log(title, description, category, status, date)
 });
