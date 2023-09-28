@@ -72,12 +72,10 @@ const render = () => {
     const div = document.createElement('div');
 
     const template = `<div class="card">
-      <h3>Titre de la tache</h3>
-      <h5>Description de la tache: <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, dicta,
-          saepe a ab eaque officiis nam alias itaque consectetur dolorem magnam ut obcaecati eum porro libero
-          quaerat quia! Perferendis, id?</span></h5>
-      <h6>Status: en cours</h6>
-      <p>Date butoire: 01/10/2023</p>
+      <h3>Titre ${tasks[i].title}</h3>
+      <h5>Description de la tache: <span>${tasks[i].description}</span></h5>
+      <h6>Status: ${tasks[i].status}</h6>
+      <p>Date butoire: ${tasks[i].date}</p>
     </div>`;
 
     div.innerHTML = template;
@@ -87,3 +85,6 @@ const render = () => {
     if (tasks[i].category === "sport") sport.appendChild(div)
   }
 }
+
+
+render();
