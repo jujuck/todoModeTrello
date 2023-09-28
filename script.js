@@ -32,3 +32,7 @@ const tasks = [
     date: "12/10/2023"
   }
 ]
+
+// Objectif 1 ajouter un élement à ma liste
+const taskForm = document.getElementById('taskForm');
+console.log(taskForm)
