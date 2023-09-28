@@ -35,4 +35,7 @@ const tasks = [
 
 // Objectif 1 ajouter un élement à ma liste
 const taskForm = document.getElementById('taskForm');
-console.log(taskForm)
+taskForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log("Submit Forms");
+});
