@@ -35,6 +35,9 @@ const tasks = [
 
 
 let idNew = 5;
+const home = document.querySelector('#home');
+const code = document.querySelector('#code');
+const sport = document.querySelector('#sport');
 
 // Objectif 1 ajouter un élement à ma liste
 const taskForm = document.getElementById('taskForm');
@@ -57,4 +60,24 @@ taskForm.addEventListener('submit', (event) => {
   })
 
   idNew++;
+  render();
 });
+
+const render = () => {
+  for (let i = 0; i < tasks.length; i++) {
+    const div = document.createElement('div');
+
+    const template = `<div class="card">
+      <h3>Titre de la tache</h3>
+      <h5>Description de la tache: <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, dicta,
+          saepe a ab eaque officiis nam alias itaque consectetur dolorem magnam ut obcaecati eum porro libero
+          quaerat quia! Perferendis, id?</span></h5>
+      <h6>Status: en cours</h6>
+      <p>Date butoire: 01/10/2023</p>
+    </div>`;
+
+    div.innerHTML = template;
+
+    home.appendChild(div)
+  }
+}
