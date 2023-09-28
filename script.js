@@ -16,7 +16,7 @@ const tasks = [
     date: "28/10/2023"
   },
   {
-    id: 4,
+    id: 3,
     title: "To Do List Workshop",
     description: "Preparer le support pour le live demo de to do list pour apprendre la manipulation du DOM afin de la présenter",
     category: "code",
@@ -31,19 +31,30 @@ const tasks = [
     status: "todo",
     date: "12/10/2023"
   }
-]
+];
+
+
+let idNew = 5;
 
 // Objectif 1 ajouter un élement à ma liste
 const taskForm = document.getElementById('taskForm');
 taskForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  console.log("Submit Forms");
 
-  const title = document.getElementById('title').value;
-  const description = document.getElementById('description').value;
-  const category = document.getElementById('category').value;
-  const status = document.getElementById('status').value;
-  const date = document.getElementById('date').value;
+  const titleNew = document.getElementById('title').value;
+  const descriptionNew = document.getElementById('description').value;
+  const categoryNew = document.getElementById('category').value;
+  const statusNew = document.getElementById('status').value;
+  const dateNew = document.getElementById('date').value;
 
-  console.log(title, description, category, status, date)
+  tasks.push({
+    id: idNew,
+    title: titleNew,
+    description: descriptionNew,
+    status: statusNew,
+    category: categoryNew,
+    date: dateNew
+  })
+
+  idNew++;
 });
