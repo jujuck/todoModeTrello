@@ -33,13 +33,78 @@ const tasks = [
   }
 ];
 
-console.log(tasks)
+let id = 5;
+let filter = "all";
 
+const todoContainer = {
+  home: document.querySelector('#home'),
+  code: document.querySelector('#code'),
+  sport: document.querySelector('#sport')
+};
+
+// Gestion du formulaire d'ajout
+document.getElementById('taskForm').addEventListener('submit', (e) => addTask(e));
 const addTask = (e) => {
-  console.log("AddTask")
+  e.preventDefault();
+
   const title = document.getElementById('title').value;
   const description = document.getElementById('description').value;
   const date = document.getElementById('date').value;
-  console.log(title, description, date)
+  const category = document.getElementById('category').value;
+  const status = document.getElementById('status').value;
 
-}
+  tasks.push({
+    id: id,
+    title: title,
+    description: description,
+    category: category,
+    status: status,
+    date: date
+  })
+
+  id++;
+  render();
+};
+
+const createCard = (task) => {
+  const fragment = document.createElement('div');
+  fragment.innerHTML = `<div class="card">
+    <h3>Title : ${task.title}</h3>
+    <h5><span>Description de la tache: </span>${task.description}</h5>
+    <h6><span>Status: </span>${task.status}</h6>
+    <p><span>Date butoire: </span>${task.date}</p>
+  </div>`;
+  return fragment;
+};
+
+const render = () => {
+  home.innerHTML = null;
+  code.innerHTML = null;
+  sport.innerHTML = null;
+
+  for (let i = 0; i < tasks.length; i++) {
+    if (filter === "all" || tasks[i].category === filter) {
+      const card = createCard(tasks[i]);
+
+      // if (tasks[i].category === "home") {
+      //   home.appendChild(card)
+      // }
+      // if (tasks[i].category === "sport") {
+      //   sport.appendChild(card)
+      // }
+      // if (tasks[i].category === "code") {
+      //   code.appendChild(card)
+      // }
+
+      todoContainer[tasks[i].category].appendChild(card);
+    }
+
+  }
+};
+
+const updateFilter = (type) => {
+  filter = type;
+  render();
+};
+
+render();

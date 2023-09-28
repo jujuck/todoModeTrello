@@ -14,10 +14,10 @@
       <img src="./assets/pngwing.com.png" alt="logo de la to do liste" class="logo">
     </div>
     <nav class="nav">
-      <button type="button">Global</button>
-      <button type="button">Maison</button>
-      <button type="button">Sport</button>
-      <button type="button">Code</button>
+      <button type="button" onclick="updateFilter('all')">Global</button>
+      <button type="button" onclick="updateFilter('home')">Maison</button>
+      <button type="button" onclick="updateFilter('sport')">Sport</button>
+      <button type="button" onclick="updateFilter('code')">Code</button>
     </nav>
   </header>
   <main>
@@ -26,14 +26,6 @@
         <h2>Maison</h2>
       </div>
       <div class="container" id="home">
-        <div class="card">
-          <h3>Titre de la tache</h3>
-          <h5><span>Description de la tache: </span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi,
-            dicta, saepe a ab eaque officiis nam alias itaque consectetur dolorem magnam ut obcaecati eum porro libero
-            quaerat quia! Perferendis, id?</h5>
-          <h6><span>Status: </span>en cours</h6>
-          <p><span>Date butoire: </span>01/10/2023</p>
-        </div>
       </div>
     </section>
     <section id="section_sport">
@@ -41,14 +33,6 @@
         <h2>Sport</h2>
       </div>
       <div class="container" id="sport">
-        <div class="card">
-          <h3>Titre de la tache</h3>
-          <h5>Description de la tache: <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, dicta,
-              saepe a ab eaque officiis nam alias itaque consectetur dolorem magnam ut obcaecati eum porro libero
-              quaerat quia! Perferendis, id?</span></h5>
-          <h6>Status: en cours</h6>
-          <p>Date butoire: 01/10/2023</p>
-        </div>
       </div>
     </section>
     <section id="section_code">
@@ -56,14 +40,6 @@
         <h2>Code</h2>
       </div>
       <div class="container" id="code">
-        <div class="card">
-          <h3>Titre de la tache</h3>
-          <h5>Description de la tache: <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi, dicta,
-              saepe a ab eaque officiis nam alias itaque consectetur dolorem magnam ut obcaecati eum porro libero
-              quaerat quia! Perferendis, id?</span></h5>
-          <h6>Status: en cours</h6>
-          <p>Date butoire: 01/10/2023</p>
-        </div>
       </div>
     </section>
     <section>
@@ -71,18 +47,18 @@
         <h2>Ajouter une tache</h2>
       </div>
       <div class="container">
-        <form class="card form">
+        <form class="card form" id="taskForm">
           <div>
             <label for="title">Titre</label>
-            <input type="text" id="title">
+            <input type="text" id="title" required>
           </div>
           <div>
             <label for="description">Description</label>
-            <textarea id="description" rows="10"></textarea>
+            <textarea id="description" rows="10" required></textarea>
           </div>
           <div>
             <label for="status">Status</label>
-            <select name="status" id="status">
+            <select name="status" id="status" required>
               <option value="todo">A faire</option>
               <option value="progress">en cours</option>
               <option value="done">Terminée</option>
@@ -90,7 +66,7 @@
           </div>
           <div>
             <label for="category">Categorie</label>
-            <select name="category" id="category">
+            <select name="category" id="category" required>
               <option value="home">Maison</option>
               <option value="sport">Sport</option>
               <option value="code">Code</option>
@@ -98,10 +74,10 @@
           </div>
           <div>
             <label for="date">Date butoire</label>
-            <input type="date" id="date">
+            <input type="date" id="date" required>
           </div>
           <div>
-            <button type="button">Ajouter</button>
+            <button type="submit">Ajouter</button>
           </div>
         </form>
       </div>
