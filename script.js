@@ -64,6 +64,10 @@ taskForm.addEventListener('submit', (event) => {
 });
 
 const render = () => {
+  home.innerHTML = null;
+  code.innerHTML = null;
+  sport.innerHTML = null;
+
   for (let i = 0; i < tasks.length; i++) {
     const div = document.createElement('div');
 
@@ -78,6 +82,8 @@ const render = () => {
 
     div.innerHTML = template;
 
-    home.appendChild(div)
+    if (tasks[i].category === "home") home.appendChild(div);
+    if (tasks[i].category === "code") code.appendChild(div)
+    if (tasks[i].category === "sport") sport.appendChild(div)
   }
 }
