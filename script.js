@@ -116,24 +116,13 @@ const addTrashClicker = () => {
   const trashs = document.querySelectorAll('.trash svg');
   for (let i = 0; i < trashs.length; i++) {
     trashs[i].addEventListener('click', () => {
-      console.log(trashs[i].id)
-      console.log("To delete")
-      //trash_icon_2
       const long = trashs[i].id.length
       const id = parseInt(trashs[i].id[long - 1], 10);
       for (let i = 0; i < tasks.length; i++) {
         if (tasks[i].id === id) {
           tasks.splice(i, 1);
         }
-
       }
-
-      console.log(tasks)
-      // Depuis la Data (tasks)
-      // Supprime la tache correspondant à mon icone cliquée
-      // A partir de son index
-      //  Rafraichir l'affichage render()
-
       render();
     })
   }
